@@ -40,3 +40,25 @@ window.addEventListener("scroll", function () {
 AOS.init({
   once: true,
 });
+
+//EmailJs
+document.addEventListener("DOMContentLoaded", function () {
+  emailjs.init("BaVxTuoWDf6WyeyUG");
+
+  const form = document.querySelector("#contact-form");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_8dyv814", "template_geo0yrh", form).then(
+      function (response) {
+        console.log("Sent successfully", response);
+        alert("Votre message a été envoyé avec succès !");
+      },
+      function (error) {
+        console.log("Failed to send", error);
+        alert("Échec de l'envoi du message. Veuillez réessayer.");
+      }
+    );
+  });
+});
