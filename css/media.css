@@ -185,6 +185,27 @@
   .contact-title {
     margin-bottom: 3rem;
   }
+
+  .category-title {
+    font-size: 2.4rem;
+  }
+
+  .prestation-item {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .prestation-name {
+    font-size: 1.4rem;
+  }
+
+  .prestation-price {
+    font-size: 1.6rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 720px) {
@@ -231,6 +252,26 @@
   .footer-copyright p {
     font-size: 1.2rem;
   }
+
+  .category-title {
+    font-size: 2rem;
+  }
+
+  .prestation-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .prestations,
+  .contact {
+    padding: 7rem 0;
+  }
 }
 
 @media (max-width: 406px) {
@@ -240,5 +281,13 @@
 
   .footer-copyright p {
     font-size: 1.2rem;
+  }
+
+  .prestation-name {
+    font-size: 1.3rem;
+  }
+
+  .prestation-price {
+    font-size: 1.5rem;
   }
 }
